@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 1 -->
+    <!-- <a href="javascript:void(0)" onclick="alert('Syed')">Click</a> -->
+
+
+    <!-- 2 -->
+<!-- 
+<img src="prol1.png" style="width: 60px; height: 50px;" onclick="alert('Apple')">
+<img src="prol.png" style="width: 60px; height: 50px;" onclick="alert('samsung')"> -->
+
+
+    <!-- 3 -->
+
+<!-- <table id="data_table" >
+    <tr>
+    <th>Name</th>
+    <th>Country</th>
+    <th>Age</th>
+    </tr>
+    
+    <tr id="row1">
+    <td id="name_row1">Syed</td>
+    <td id="country_row1">Pakistan</td>
+    <td id="age_row1">20</td>
+    <td>
+   
+    <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+    
+    </td>
+    </tr>
+
+    <tr id="row2">
+        <td id="name_row2">salman</td>
+        <td id="country_row2">china</td>
+        <td id="age_row2">22</td>
+        <td>
+       
+        <input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+        
+        </td>
+        </tr>
+    
+
+        <tr id="row3">
+            <td id="name_row3">majid</td>
+            <td id="country_row3">china</td>
+            <td id="age_row3">21</td>
+            <td>
+           
+            <input type="button" value="Delete" class="delete" onclick="delete_row('3')">
+            
+            </td>
+            </tr>
+
+
+</table>  -->
+
+    <!-- 4 -->
+
+<!-- <img src="prol.png" onmouseenter="src='prol1.png'"style="width: 60px; height:
+ 50px;"> -->
+ <!-- Email:<br>
+ <input type="text" size="30" onFocus="this.style.backgroundColor='yellow';"
+ onBlur="this.style.backgroundColor='white';"> -->
+
+
+
+    <!-- 5 -->
+
+<!-- <div>
+<button id="inc" onclick="increment()">Increment</button>
+<span id="dis">0</span>
+<button id="dec" onclick="decrement()">decrement</button>
+
+</div> -->
+
+
+ 
+<!-- 
+ <form>
+    Email:
+    <input type="text" id="email">
+    <input type="submit" value="Submit">
+    </form> -->
+
+    <!-- <form onSubmit="checkAddress('email');">
+        Email:
+        <input type="text" id="email">
+        <input type="submit" value="Submit">
+        </form> -->
+
+        <!-- <form>
+      ZIP:<br>
+     <input type="text" id="zip" onBlur="fillCity();"><br>
+     City:<br>
+     <input type="text" id="city">
+    </form> -->
+
+<!-- <p id="slow">
+    slow lories are a group of several...
+  <a href="javascript:void(0);" onclick="expandlories()">click for more</a>
+</p> -->
+
+<!-- 
+<style>
+    .hidden{
+        display: none;
+    }
+</style>
+<img src="prol.png" style="width: 150px; height: 150px;" id="ufff" onclick="makevisible();"
+/> -->
+<!-- 
+<img src="prol.png" width="150px" height="150px" onMouseover="src='prol1.png'"> -->
+<!-- 
+<div id="hump">
+<p>All the king's horses.</p>
+<p>All the dude's crew.</p>
+<p>All the town's orthopedists.</p>
+</div> -->
+
+
+
+
+    <script>
+//////___3_____///////
+
+function delete_row(no)
+{
+ document.getElementById("row"+no+"").outerHTML="";
+}
+        
+
+//////___5____///////
+
+// let count=0;
+// const valuedis=document.getElementById("dis");
+// function increment() {
+//     count++;
+//     valuedis.innerText=count;
+// }
+
+
+// function decrement() {
+//     count--;
+//     valuedis.innerText=count;
+// }
+
+
+
+
+
+
+
+
+
+
+
+// var d=document.getElementById("hump");
+// var pCount=0;
+// for (let i = 0; i < d.childNodes.len; index++) {
+// }
+
+
+            // function makevisible(){
+            //     document.getElementById("ufff").className="hidden" ;
+            // }
+// function expandlories(){
+//    var expandpara="hhxsh sdfhkjf je jel j; kjjjlv k;k vne w JEOFJ W J; ;EJIUWLA VWJ; J EVKWWKVJE N;LJ ERWJ; E KÉHW JJ EE  ELWW/E   E E EWW F G GG G";
+//    document.getElementById("slow").innerHTML=expandpara;
+// }
+
+        // function checkAddress(fieldId) {
+        //      var val = document.getElementById(fieldId).value;
+        //      if (val === "") {
+        //      alert("Email address required.");
+        //      }
+        //      } 
+
+
+
+
+//         function fillCity() {
+
+//  var cityName;
+//  var zipEntered = document.getElementById("zip").value;
+//  switch (zipEntered) {
+//  case "60608" :
+//  cityName = "Chicago";
+//  break;
+//  case "68114" :
+//  cityName = "Omaha";
+//  break;
+//  case "53212" :
+//  cityName = "Milwaukee";
+//  }
+//  document.getElementById("city").value = cityName;
+//  }      
+
+        </script>
+    </body>
+</html>
