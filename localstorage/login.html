@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Login
+    </h1>
+   
+    Email:
+    <input type="text" id="email"><br>
+    <span id="em" style="color: red;"></span><br>
+
+    Password:
+    <input type="password" id="pass"><br>
+    <span id="ps" style="color: red;"></span><br>
+
+
+    <input type="submit" id="btn" onclick="login()" value="Login"/>
+    <script>
+        function login() {
+         let eml=document.getElementById("email").value;
+         let pas=document.getElementById("pass").value  
+
+         let nam1=localStorage.getItem("mail");
+         let pas1=localStorage.getItem("pasword");
+            
+         if (eml===nam1 && pas===pas1) {
+             window.location.href="home.html";
+           return true;
+            }
+         else{
+             alert("Email and pasword is incorrect ")
+             return false;
+         }
+
+        }
+        login();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form">
+        <h1>
+            Signup
+        </h1>
+        <div >
+        Username:
+        <input type="text" id="username"><br>
+        <span id="us" style="color: red;"></span><br>
+
+        Email:
+        <input type="text" id="email"><br>
+        <span id="em" style="color: red;"></span><br>
+
+        Password:
+        <input type="password" id="pass"><br>
+        <span id="ps" style="color: red;"></span><br>
+
+         Confirm Password:
+        <input type="password" id="conpass"><br>
+        <span id="cps" style="color: red;"></span><br>
+
+        Contact:
+        <input type="number" id="num"><br>
+        <span id="co" style="color: red;"></span><br>
+
+        <input type="submit" id="btn" onclick="valid(),showinput()" >
+    </div>
+
+    <div>
+        <label>
+            Your input is:
+        </label>
+        <p><span id="display" ></span></p>
+        <p><span id="display1" ></span></p>
+        <p><span id="display2" ></span></p>
+        
+    </div>
+    
+
+    </form>
+    
+</body>
+<script>
+function showinput() {
+    // e.preventDefault();
+    document.getElementById("display").innerHTML=
+    document.getElementById("username").value;
+    
+    document.getElementById("display1").innerHTML=
+    document.getElementById("email").value;
+
+    
+    document.getElementById("display2").innerHTML=
+    document.getElementById("num").value;
+}
+
+
+
+function valid()
+{
+  let usr=document.getElementById("username").value;  
+  let email=document.getElementById('email').value;
+  let pasword=document.getElementById('pass').value;
+  let cpasword=document.getElementById('conpass').value;
+  let cont=document.getElementById('num').value;
+
+  localStorage.setItem("user",usr);
+  localStorage.setItem("mail",email);
+  localStorage.setItem("pasword",pasword);
+  localStorage.setItem("cot",cont);
+
+// let usercheck = /^[A-Za-z.]{3,30}$/;
+// let emailcheck=/^[A-Za-z_0-9]{3,15}@[A-Za-z]{3,8}[.]{1}[A-Za-z.]{2,6}$/;
+// let passwordcheck=/^[a-zA-Z0-9!@#$%^&*]{8,15}$/;
+// let cpasswordcheck=/^[a-zA-Z0-9!@#$%^&*]{8,15}$/;
+// let concheck=/^[92]{2}[0-9]{10}$/;
+
+
+// if (usercheck.test(usr)) {
+//     document.getElementById('us').innerHTML= " ";
+// }
+// else{
+//     document.getElementById('us').innerHTML= "Username is invalid";
+//     //Agr user wrong user bhi dai de return false se ye server pr send nhi ho.. 
+//     return false;
+// }
+
+
+
+// if (emailcheck.test(email)) {
+//     document.getElementById('em').innerHTML= " ";
+// }
+// else{
+//     document.getElementById('em').innerHTML= "Email is invalid";
+//     //Agr user wrong user bhi dai de return false se ye server pr send nhi ho.. 
+//     return false;
+// }
+
+
+
+// if (passwordcheck.test(pasword)) {
+//     document.getElementById('ps').innerHTML= " ";
+// }
+// else{
+//     document.getElementById('ps').innerHTML= "Password is invalid";
+//     //Agr user wrong user bhi dai de return false se ye server pr send nhi ho.. 
+//     return false;
+// }
+
+
+
+// if (cpasword.match(pasword)) {
+//     document.getElementById('cps').innerHTML= " ";
+// }
+// else{
+//     document.getElementById('cps').innerHTML= "Passsword is not match";
+//     //Agr user wrong user bhi dai de return false se ye server pr send nhi ho.. 
+//     return false;
+// }
+
+
+
+// if (concheck.test(cont)) {
+//     document.getElementById('co').innerHTML= " ";
+// }
+// else{
+//     document.getElementById('co').innerHTML= "Number is invalid";
+//     //Agr user wrong user bhi dai de return false se ye server pr send nhi ho.. 
+//     return false;
+// }
+// }
+}
+valid( );
+showinput();
+
+</script>
+</html>
