@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Kit</title>
+    <link rel="stylesheet" href="drum.css">
+</head>
+<body>
+    <div class="keys">
+
+        <div class="key" data-key="65" >
+            <kbd>A</kbd>
+            <span>B-Ding</span>
+        </div>
+        <div class="key" data-key="83">
+            <kbd>S</kbd>
+            <span>Bells</span>
+        </div>
+        <div class="key" data-key="68">
+            <kbd>D</kbd>
+            <span>drum</span>
+        </div>
+        <div class="key" data-key="70">
+            <kbd>F</kbd>
+            <span>harbet</span>
+        </div>
+        <div class="key" data-key="71">
+            <kbd>G</kbd>
+            <span>Echo</span>
+        </div>
+        <div class="key" data-key="72">
+            <kbd>H</kbd>
+            <span>t-drum</span>
+        </div>
+        <div class="key" data-key="74">
+            <kbd>J</kbd>
+            <span>tri-dry</span>
+        </div>
+        <div class="key" data-key="75">
+            <kbd>K</kbd>
+            <span>tunnel</span>
+        </div>
+    </div>
+    <audio data-key="65" src="./sound/bell-ding-560.wav"></audio>
+    <audio data-key="83" src="./sound/bells-571.wav"></audio>
+    <audio data-key="68" src="./sound/drum-sound-550.wav"></audio>
+    <audio data-key="70" src="./sound/heartbeat-trailer-488.wav"></audio>
+    <audio data-key="71" src="./sound/hit-with-eco-544.wav"></audio>
+    <audio data-key="72" src="./sound/tribal-drum-562.wav"></audio>
+    <audio data-key="74" src="./sound/tribal-dry-drum-558.wav"></audio>
+    <audio data-key="75" src="./sound/tunnel-drum-554.wav"></audio>
+
+    <script src="drum.js"></script>
+
+</body>
+</html>
