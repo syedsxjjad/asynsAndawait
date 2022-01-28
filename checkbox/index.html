@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox</title>
+</head>
+<style>
+    /* body{
+        color: black;
+    } */
+    /* div{
+        display:  inline-block;
+    }
+    button{
+        display: block;
+        margin: 20px auto;
+    }
+  */
+</style>
+<body>
+
+  
+   <!-- ////////////________/////// -->
+
+    <!-- <div>
+        <label><input type="checkbox" value="Orange">Orange</label>
+        <label><input type="checkbox" value="Apple">Apple</label>
+        <label><input type="checkbox" value="Mango">Mango</label>
+        <label><input type="checkbox" value="Bnana">Bnana</label>
+        <button>Show</button>
+        <h1>Result</h1>
+    </div> -->
+
+
+<!-- ///////////_____//////// -->
+
+    <!-- <div class="inbox">
+    <div class="item">
+     <input type="checkbox">
+     <p>This is pen</p>
+    </div>
+    
+    <div class="item">
+     <input type="checkbox">
+     <p>This is Pencil</p>    
+    </div>   
+    
+    <div class="item">
+     <input type="checkbox">
+     <p>This is ego</p>
+    </div>
+
+
+    <div class="item">
+        <input type="checkbox">
+        <p>This is kit</p>
+    </div>
+   
+
+    <div class="item">
+        <input type="checkbox">
+        <p>This is ford</p>
+    </div>
+   
+    <div class="item">
+        <input type="checkbox">
+        <p>This is hod</p>
+    </div>
+</div> -->
+<input type="button" onclick="selectAll()" value="Select All">
+<input type="button" onclick="deselectAll()" value="Deselect All"><br>
+<input type="checkbox" name="city" value="Karachi">Karachi<br>
+<input type="checkbox" name="city" value="Lahore">Lahore<br>
+<input type="checkbox" name="city" value="Islamabad">Islamabad<br>
+<input type="checkbox" name="city" value="Rawalpindi">Rawalpindi<br>
+
+<script>
+ function selectAll() {
+     let city=document.getElementsByName("city");
+    // let citycheck=city.length;
+   for (let i = 0; i < city.length; i++) {
+       city[i].checked=true;
+   }
+ }
+
+ function deselectAll() {
+     let city=document.getElementsByName("city");
+    // let citycheck=city.length;
+   for (let i = 0; i < city.length; i++) {
+       city[i].checked=false;
+   }
+ }
+    ///////___________////////////
+    // let btnshow=document.querySelector('button');
+    // let result=document.querySelector('h1');
+    // btnshow.addEventListener('click',()=>{
+    //     let chekboc= document.querySelector('input[type="checkbox"]:checked')
+    //   result.innerHTML=chekboc.value;
+    // })
+
+//////____________/////////////
+
+    //     const chekboxes=document.querySelectorAll(
+//         '.inbox input[type="checkbox"]');
+
+//         let lastchecke;
+//         function han(e){
+//             console.log(e);
+//             lastchecke=this;
+//         }
+
+//    chekboxes.forEach(checkbox => checkbox.addEventListener(
+//        'click',han
+//    ));
+
+    
+</script>
+</body>
+</html>
