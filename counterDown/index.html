@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <!-- <div class="box">Weeks
+            <span id="weeks">2</span>
+        </div> -->
+
+        <div class="box">Days
+            <span id="days">4</span>
+        </div>
+        
+        <div class="box">Hours
+            <span id="hours">5</span>
+        </div>
+        
+        <div class="box">Minutes
+            <span id="minutes">6</span>
+        </div>
+        
+        <div class="box">Seconds
+            <span id="seconds">7</span>
+        </div>
+    </div>
+    
+
+<script>
+var evenDate=new Date("Feb 03,2022").getTime();
+var x = setInterval(function(){
+
+    var currentDate = new Date().getTime();
+    var difference = evenDate - currentDate;
+
+    ////calculate Days,Hours,Minutes,Seconds
+
+    var s=Math.floor(difference / 1000);
+    var m=Math.floor(s / 60);
+    var h=Math.floor(m / 60);
+    var d=Math.floor(h / 24);
+    // var w=Math.floor(d / 7);
+
+    /////get remaaning Time
+    
+    s %= 60;
+    m %= 60;
+    h %= 24;
+
+    ///// append 0 at the begninig
+
+    // w = (w < 10) ? "0" + w : w;
+    d = (d < 10) ? "0" + d : d;
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+
+//  document.getElementById("weeks").innerHTML=w;
+ document.getElementById("days").innerHTML=d;
+ document.getElementById("hours").innerHTML=h;
+ document.getElementById("minutes").innerHTML=m;
+ document.getElementById("seconds").innerHTML=s;
+ 
+ if(difference <= 0){
+     clearInterval(x);
+ }
+    
+},1000)
+
+</script>
+
+ </body>
+</html>
