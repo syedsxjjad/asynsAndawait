@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Recognition</title>
+</head>
+<link rel="stylesheet" href="index.css">
+<body>
+    <div id="main">
+    <h1>Voice Recognition</h1>
+   <textarea id="spech" placeholder="Your Voice Message is here"></textarea>
+   <button id="btn" onclick="voice()">Click to Speak</button> 
+</div>
+    <script>
+
+function voice() {
+    let reco=new webkitSpeechRecognition();
+    reco.lang="en-GB";
+    reco.onresult= function(event){
+
+        console.log(event);
+    document.getElementById("spech").value=
+      event.results[0][0].transcript;
+    }
+
+    reco.start();
+}
+    </script>
+</body>
+</html>
