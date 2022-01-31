@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech</title>
+</head>
+<link rel="stylesheet" href="index.css">
+<body>
+    <div id="main">
+    <h1>Text to Spech</h1>
+   <textarea id="textarea" placeholder="Enter Your Text Here."></textarea>
+   <button id="button" type="button">Speak</button> 
+</div>
+    <script>
+
+const texarea=document.querySelector('textarea');
+const button=document.querySelector('button');
+
+const readLoud=(message)=>{
+    const speech=new SpeechSynthesisUtterance();
+
+    speech.text=message;
+    speech.rate=1;
+    speech.pitch=1;
+    speech.volume -1;
+
+    window.speechSynthesis.speak(speech);
+
+}
+button.onclick =()=>{
+     const tex=texarea.value;
+    if(tex != "" || tex !=" "){
+        readLoud(tex);
+    }
+    
+}
+
+       
+    
+
+        </script>
+</body>
+</html>
